@@ -22,10 +22,10 @@ var Blog = function (){
 		}).then(function(data){
 			var posts = data.response.docs.map(function(elem){
 
-				return self.renderArticle(elem, templatePost);
-
-			});
-			articleWrapper.append(posts);
+			return self.renderArticle(elem, templatePost);
+		});
+			
+		articleWrapper.append(posts);
             
 		});
     };
